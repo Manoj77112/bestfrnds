@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Best Friends Forever ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background Music -->
+  <audio autoplay loop hidden>
+    <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <header>
+    <h1>Best Friends Forever ❤️</h1>
+    <p class="quote">"A friend is someone who knows all about you and still loves you."</p>
+  </header>
+
+  <div class="section">
+    <h2>Happy Best Friends Day!</h2>
+    <p>Through thick and thin, you've always been by my side. Here's a tribute to all our wonderful memories and unbreakable bond. ❤️</p>
+
+    <div class="gallery">
+      <img src="pic.jpg" alt="The best Memory till now." />
+     </div>
+
+    <div class="memories">
+      <h3>Our Favorite Memories 💫</h3>
+      <ul>
+        <li>🌟 Midnight conversations</li>
+        <li>😝college stunts </li>
+        <li>📸 photo stunt in scl reunion</li>
+        <li>🎂 Birthday surprise</li>
+        <li>😅😜Many Roastings</li>
+      </ul>
+    </div>
+
+    <div class="message-box">
+      <h3>Leave a Message 💌</h3>
+      <form onsubmit="event.preventDefault(); showMessage();">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <textarea id="message" rows="3" placeholder="Your message here..." required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <div id="messages"></div>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px;">
+      <a href="file2.html" style="font-weight: bold;">Meet Our Awesome Gang 👯‍♀️</a>
+    </div>
+  </div>
+
+  <footer>
+    Made with 💖 for my best friend | Best Friends Day 2025
+  </footer>
+
+  <script>
+    function showMessage() {
+      const name = document.getElementById("name").value;
+      const message = document.getElementById("message").value;
+      const container = document.getElementById("messages");
+
+      const msgDiv = document.createElement("div");
+      msgDiv.innerHTML = `<p><strong>${name}:</strong> ${message}</p>`;
+      container.appendChild(msgDiv);
+
+      document.getElementById("name").value = '';
+      document.getElementById("message").value = '';
+    }
+  </script>
+<a href="certificate.html">🎓 Generate Friendship Certificate</a>
+
+
+</body>
+</html>
